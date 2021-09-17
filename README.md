@@ -3,3 +3,4 @@ How to setup a new linux distro for use with python
 
 _Updated: 2021-09-17_
 
+# THE TLDR;
