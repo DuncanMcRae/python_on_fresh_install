@@ -5,3 +5,15 @@ _Updated: 2021-09-17_
 
 # THE TLDR;
 pyenv -> pipx -> poetry -> python
+
+# PYENV
+
+
+# PIPX
+
+
+
+# POETRY
+
+
+# VSCODE
