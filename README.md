@@ -1,5 +1,5 @@
 # python_on_fresh_install
-How to setup a new linux distro for use with python
+How to setup a new Linux install for use with python (also relevant for MacOS and Windows)
 
 _Updated: 2021-09-17_
 
@@ -32,7 +32,9 @@ How to install it:
 * Install tools `pipx black`, `pipx poetry` and the others.
 
 # POETRY
-
+What is it: [poetry](https://python-poetry.org/) is a python packaging and dependancy management tool that can also create virtual environments. NOTE: `pip` does not check for dependancy issues, so `poetry` is better.  
+How to use it:  
+* 
 
 # GIT
 
@@ -44,4 +46,6 @@ How to install it:
 * Snap is installed by default on a full install of Manjaro, but if you have installed the lite version then you will need to install it [install snap](https://snapcraft.io/docs/installing-snap-on-manjaro-linux)
 How to configure it:
 * 
+
+# WORKFLOW
 
