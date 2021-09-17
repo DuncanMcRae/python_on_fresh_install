@@ -19,11 +19,17 @@ How to install it:
 How to use it:
 * list available versions of python `pyenv install -l`
 * install the version that you want `pyenv install 3.9.7`
+* update the shims after install with `pyenv rehash`
 * set version as global `pyenv global 3.9.7` or local (that folder) `pyenv local 3.9.7`
 * check what versions of python are installed `pyenv versions` and what is running `pyenv --version`
 
 # PIPX
-
+What is it: pipx allows you to install global python tools that will be useable throughout all virtual envs.  Linting tools like `mypy`, `flake8`, formatters like `black`, and dependency management tools like `poetry` can be installed once globally and reused across projects  
+How to install it:
+* [pipx git page](https://github.com/pypa/pipx)
+* Make sure you have an active global python working `pyenv global` then install with `pip install pipx`
+* Add pipx to `PATH` by running `pipx ensurepath`
+* Install tools `pipx black`, `pipx poetry` and the others.
 
 # POETRY
 
@@ -32,4 +38,10 @@ How to use it:
 
 
 # VSCODE
+What is it: VisualStudio Code is a software IDE that enables users to install bolt-on languages and extensions and themes as needed.  
+How to install it:
+* Many ways to install it, but running Linux Manjaro 21.X I could only get python to install in to it if I used the install from snapd.
+* Snap is installed by default on a full install of Manjaro, but if you have installed the lite version then you will need to install it [install snap](https://snapcraft.io/docs/installing-snap-on-manjaro-linux)
+How to configure it:
+* 
 
