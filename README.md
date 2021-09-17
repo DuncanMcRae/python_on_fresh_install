@@ -10,13 +10,13 @@ In general [Best practice for setting up a python env](https://towardsdatascienc
 # PYENV
 What is it: pyenv lets you easily switch between multiple versions of Python.
 How to install it:
-* Install dependancies: (https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
-* Install it from git clone following the guide (https://github.com/pyenv/pyenv)
-* If Linux using  the terminal zsh, you need to install the echos in to ~/.zprofile (might not exist) and ~/.bash_profile
-* init the shell with the zsh echo in to the ~./zshrc
+* [Install dependancies](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+* Install it from git clone following [this guide](https://github.com/pyenv/pyenv)
+* If Linux using  the terminal zsh, you need to install the echos in to `~/.zprofile` (might not exist) and `~/.bash_profile`
+* init the shell with the zsh echo in to the `~./zshrc`
 
 How to use it:
-* *list available versions of python* `pyenv list -l`
+* **list available versions of python** `pyenv list -l`
 
   
 # PIPX
