@@ -70,4 +70,10 @@ How to configure it:
 * Use poetry to create a new project `poetry new test_project`. Image shows the default new project along with the git files. ![image](https://user-images.githubusercontent.com/32591094/133867085-ff5dd487-33bd-4229-9bf5-42e84c7c39e5.png)
 * Use `poetry env info` to grab the path for the virtual environment.
 * Open vscode and `ctrl+shift+P` or `View>Command Palette`. Type `Python Select Interpreter` then `+ Enter interpreter path` and paste the path from `poetry env info`. You should be able to see the python version and virtual environment in the lower left corner of the status bar inside vscode.
-..
+* You can either work with git inside vscode or continue to use the shell. The below workflow will use the shell.
+* You can see which files have changed on the local system `git status`, you can add them to the _staging area_ `git add <filename>`. Git takes glob like commands so `git add *` will add all changes. You then `git commit -m "description of commit"` to lock those changes in to your local git database.
+* Send the changes to the remote repository `git push`. This should ask you for your username and password. My password is the token I created for remote access to the github API.
+* You can then `git pull` and `git push` all day long.
+
+# ADDITIONAL WORKFLOW ROUTINES
+* Branching
