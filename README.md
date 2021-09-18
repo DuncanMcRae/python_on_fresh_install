@@ -52,7 +52,7 @@ What is it: Awesome. Git is a tool for tracking changes in files (software). You
 # VSCODE
 What is it: VisualStudio Code is a software IDE that enables users to install bolt-on languages and extensions and themes as needed.  
 How to install it:
-* Many ways to install it, but running Linux Manjaro 21.X I could only get python to install in to it if I used the install from snapd.
+* Many ways to install it, but running Linux Manjaro 21.1.3 I could only get python to install in to vscode if I used the install from snapd. It failed to install Jupyter any other way.
 * Snap is installed by default on a full install of Manjaro, but if you have installed the lite version then you will need to install it [install snap](https://snapcraft.io/docs/installing-snap-on-manjaro-linux)
 How to configure it:
 * Must have extensions: Bookmarks, Bracket Pair Colorizer 2, GitLens, indent-rainbow, Material Icon Theme, Python (installs Jupyter and Pylance), Python Docstring Generator, vscode-icons. I also theme it with Dracula (as my entire system is themed this way).
@@ -61,10 +61,11 @@ How to configure it:
 ![image](https://user-images.githubusercontent.com/32591094/133871418-e50a6424-9cd5-4dd1-a768-d29c59b663ce.png) 
 
 # WORKFLOW
-* create a new project in GitHub.com and select to add: _README.md_, _LICENCE_ (TheUnlicence) and the _.gitignore_ (Python).
+* Create a new project in GitHub.com and select to add: _README.md_, _LICENCE_ (TheUnlicence) and the _.gitignore_ (Python).
 * In terminal clone the git in to your working directory `git clone https://github.com/DuncanMcRae/test_project`. Note: you may have to provide a username and password/token.
-* move in to the project folder `cd test_project`
-* use pyenv to assign a local version of python to the folder `pyenv local 3.9.7`. This creates a hidden `.python-version` file.
-* use poetry to create a new project `poetry new test_project`. Image shows the default new project along with the git files. ![image](https://user-images.githubusercontent.com/32591094/133867085-ff5dd487-33bd-4229-9bf5-42e84c7c39e5.png)
-
-* 
+* Move in to the project folder `cd test_project`
+* Use pyenv to assign a local version of python to the folder `pyenv local 3.9.7`. This creates a hidden `.python-version` file.
+* Use poetry to create a new project `poetry new test_project`. Image shows the default new project along with the git files. ![image](https://user-images.githubusercontent.com/32591094/133867085-ff5dd487-33bd-4229-9bf5-42e84c7c39e5.png)
+* Use `poetry env info` to grab the path for the virtual environment.
+* Open vscode and `ctrl+shift+P` or `View>Command Palette`. Type `Python Select Interpreter` then `+ Enter interpreter path` and paste the path from `poetry env info`
+..
