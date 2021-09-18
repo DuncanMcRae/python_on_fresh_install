@@ -37,12 +37,14 @@ How to install it:
 # POETRY
 What is it: [poetry](https://python-poetry.org/) is a python packaging and dependancy management tool that can also create virtual environments. NOTE: `pip` does not check for dependancy issues, so `poetry` is better.  
 How to use it:  
+* [Basic usage](https://python-poetry.org/docs/basic-usage/)
 * you can build a new project using `poetry new project_name` and this will create a _recommended_ project. You can also initialise an existing project using `poetry init`. Initialisation asks you a host of questions to build the `pyproject.toml` file - creating a new project defaults these values. I have found using `poetry new project_name` is better than initialising a project that is already in progress using `poetry init` as this does not appear to insert _python_ in to the `pyproject.toml` file. I have found poetry will fail on some library importing for unknown reasons as _python_ is not present in the toml file - this happens with scipy.
 * Adjust the toml file as needed.
 * move in to the new project created by poetry `cd project_name`.
 * Add thrid party python libraries using `poetry add pandas`. This will initially create a virtual environment for you and if it is not the first time you run it, it will check that there are no dependancy issues.
 * Check what libraries are installed using poetry not pip `poetry show`
 * You can see the active virtual env `poetry env list` and get a full breakdown of it `poetry env info`. You may need the Path from the last command for configuring vscode.
+* You can see all the dependencies in a tree like presentation `poetry show --tree` - this is cool.
 
 # GIT
 What is it: Awesome. Git is a tool for tracking changes in files (software). You can fork software, merge forks back to the main branch and push and pull files from are remote repository (github) to your local system.
@@ -67,5 +69,5 @@ How to configure it:
 * Use pyenv to assign a local version of python to the folder `pyenv local 3.9.7`. This creates a hidden `.python-version` file.
 * Use poetry to create a new project `poetry new test_project`. Image shows the default new project along with the git files. ![image](https://user-images.githubusercontent.com/32591094/133867085-ff5dd487-33bd-4229-9bf5-42e84c7c39e5.png)
 * Use `poetry env info` to grab the path for the virtual environment.
-* Open vscode and `ctrl+shift+P` or `View>Command Palette`. Type `Python Select Interpreter` then `+ Enter interpreter path` and paste the path from `poetry env info`
+* Open vscode and `ctrl+shift+P` or `View>Command Palette`. Type `Python Select Interpreter` then `+ Enter interpreter path` and paste the path from `poetry env info`. You should be able to see the python version and virtual environment in the lower left corner of the status bar inside vscode.
 ..
