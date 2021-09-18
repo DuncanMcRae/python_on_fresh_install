@@ -36,7 +36,12 @@ How to install it:
 # POETRY
 What is it: [poetry](https://python-poetry.org/) is a python packaging and dependancy management tool that can also create virtual environments. NOTE: `pip` does not check for dependancy issues, so `poetry` is better.  
 How to use it:  
-* 
+* you can build a new project using `poetry new project_name` and this will create a _recommended_ project. You can also initialise an existing project using `poetry init`. Initialisation asks you a host of questions to build the `pyproject.toml` file - creating a new project defaults these values. I have found using `poetry new project_name` is better than initialising a project that is already in progress using `poetry init` as this does not appear to insert _python_ in to the `pyproject.toml` file. I have found poetry will fail on some library importing for unknown reasons as _python_ is not present in the toml file - this happens with scipy.
+* Adjust the toml file as needed.
+* move in to the new project created by poetry `cd project_name`.
+* Add thrid party python libraries using `poetry add pandas`. This will initially create a virtual environment for you and if it is not the first time you run it, it will check that there are no dependancy issues.
+* Check what libraries are installed using poetry not pip `poetry show`
+* You can see the active virtual env `poetry env list` and get a full breakdown of it `poetry env info`. You may need the Path from the last command for configuring vscode.
 
 # GIT
 
@@ -54,6 +59,6 @@ How to configure it:
 * In terminal clone the git in to your working directory `git clone https://github.com/DuncanMcRae/test_project`. Note: you may have to provide a username and password/token.
 * move in to the project folder `cd test_project`
 * use pyenv to assign a local version of python to the folder `pyenv local 3.9.7`. This creates a hidden `.python-version` file.
-* use poetry to create a new project `poetry new test_project`. This is better than initialising a project that is already in progress using `poetry init` as this does not appear to insert _python_ in to the `pyprojecttoml` file. Image shows the default new project along with the git files. ![image](https://user-images.githubusercontent.com/32591094/133867085-ff5dd487-33bd-4229-9bf5-42e84c7c39e5.png)
+* use poetry to create a new project `poetry new test_project`. Image shows the default new project along with the git files. ![image](https://user-images.githubusercontent.com/32591094/133867085-ff5dd487-33bd-4229-9bf5-42e84c7c39e5.png)
 
 * 
