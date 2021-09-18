@@ -56,21 +56,21 @@ How to install it:
 * Snap is installed by default on a full install of Manjaro, but if you have installed the lite version then you will need to install it [install snap](https://snapcraft.io/docs/installing-snap-on-manjaro-linux)
 How to configure it:
 * Must have extensions: Bookmarks, Bracket Pair Colorizer 2, GitLens, indent-rainbow, Material Icon Theme, Python (installs Jupyter and Pylance), Python Docstring Generator, vscode-icons. I also theme it with Dracula (as my entire system is themed this way).
-* File>Preferences>Settings. Type _python formatting_ and make sure Black Path is correct as per `pipx list`. Also Black Args set with `--line-length\n79. All changes are saved in to the vscode's settings.json file found `~/.config/Code/User/settings.json`. See below for mine (note: the defaultInterpreterPath changes):
+* File>Preferences>Settings. Type _python formatting_ and make sure Black Path is correct as per `pipx list`. Also Black Args set with `--line-length\n79. All changes are saved in to the vscode's settings.json file found `~/.config/Code/User/settings.json`. See below for mine (note: the defaultInterpreterPath changes):  
 `{
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        "--line-length",
-        "79"
-    ],
-    "python.formatting.blackPath": "/home/duncan/.local/bin/black",
-    "python.defaultInterpreterPath": "/home/duncan/.cache/pypoetry/virtualenvs/cross-profile-grapher-amgZGmvh-py3.9",
-    "workbench.iconTheme": "vscode-icons",
-    "terminal.integrated.automationShell.linux": "zsh",
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "vsicons.dontShowNewVersionMessage": true,
-    "editor.formatOnSave": true
-}`
+    "python.formatting.provider": "black",  
+    "python.formatting.blackArgs": [  
+        "--line-length",  
+        "79"  
+    ],  
+    "python.formatting.blackPath": "/home/duncan/.local/bin/black",  
+    "python.defaultInterpreterPath": "/home/duncan/.cache/pypoetry/virtualenvs/cross-profile-grapher-amgZGmvh-py3.9",  
+    "workbench.iconTheme": "vscode-icons",  
+    "terminal.integrated.automationShell.linux": "zsh",  
+    "terminal.integrated.defaultProfile.linux": "zsh",  
+    "vsicons.dontShowNewVersionMessage": true,  
+    "editor.formatOnSave": true  
+}`  
 
 # WORKFLOW
 * create a new project in GitHub.com and select to add: _README.md_, _LICENCE_ (TheUnlicence) and the _.gitignore_ (Python).
