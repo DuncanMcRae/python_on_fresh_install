@@ -32,6 +32,7 @@ How to install it:
 * Add pipx to _PATH_ by running `pipx ensurepath`
 * Install tools `pipx black`, `pipx poetry` and the others.
 * Check black installed `black --version`
+* List all installed python libraries `pipx list`. This also shows where the apps are exposed on the $PATH. Take note for vscode.
 
 # POETRY
 What is it: [poetry](https://python-poetry.org/) is a python packaging and dependancy management tool that can also create virtual environments. NOTE: `pip` does not check for dependancy issues, so `poetry` is better.  
@@ -44,7 +45,9 @@ How to use it:
 * You can see the active virtual env `poetry env list` and get a full breakdown of it `poetry env info`. You may need the Path from the last command for configuring vscode.
 
 # GIT
-
+What is it: Awesome. Git is a tool for tracking changes in files (software). You can fork software, merge forks back to the main branch and push and pull files from are remote repository (github) to your local system.
+* setup a two-factor authorisation or create a 'token' in github to give you the ability to push/pull between remote<>local through the github API: _Settings>Developer Settings>Personal Access Tokens_. I just save this token down in my LastPass password manager browser extension as a note and add it to my favourites so I can get at it quickly.
+* There is truck loads you can do with git/github, but what I do typically is outlined in the WORKFLOW section below.
 
 # VSCODE
 What is it: VisualStudio Code is a software IDE that enables users to install bolt-on languages and extensions and themes as needed.  
@@ -52,7 +55,22 @@ How to install it:
 * Many ways to install it, but running Linux Manjaro 21.X I could only get python to install in to it if I used the install from snapd.
 * Snap is installed by default on a full install of Manjaro, but if you have installed the lite version then you will need to install it [install snap](https://snapcraft.io/docs/installing-snap-on-manjaro-linux)
 How to configure it:
-* 
+* Must have extensions: Bookmarks, Bracket Pair Colorizer 2, GitLens, indent-rainbow, Material Icon Theme, Python (installs Jupyter and Pylance), Python Docstring Generator, vscode-icons. I also theme it with Dracula (as my entire system is themed this way).
+* File>Preferences>Settings. Type _python formatting_ and make sure Black Path is correct as per `pipx list`. Also Black Args set with `--line-length\n79. All changes are saved in to the vscode's settings.json file found `~/.config/Code/User/settings.json`. See below for mine (note: the defaultInterpreterPath changes):
+`{
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "79"
+    ],
+    "python.formatting.blackPath": "/home/duncan/.local/bin/black",
+    "python.defaultInterpreterPath": "/home/duncan/.cache/pypoetry/virtualenvs/cross-profile-grapher-amgZGmvh-py3.9",
+    "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.automationShell.linux": "zsh",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.formatOnSave": true
+}`
 
 # WORKFLOW
 * create a new project in GitHub.com and select to add: _README.md_, _LICENCE_ (TheUnlicence) and the _.gitignore_ (Python).
