@@ -64,10 +64,11 @@ How to configure it:
 
 # WORKFLOW
 * Create a new project in GitHub.com and select to add: _README.md_, _LICENCE_ (TheUnlicence) and the _.gitignore_ (Python).
-* In terminal clone the git in to your working directory `git clone https://github.com/DuncanMcRae/test_project`. Note: you may have to provide a username and password/token.
-* Move in to the project folder `cd test_project`
-* Use pyenv to assign a local version of python to the folder `pyenv local 3.9.7`. This creates a hidden `.python-version` file.
 * Use poetry to create a new project `poetry new test_project`. Image shows the default new project along with the git files. ![image](https://user-images.githubusercontent.com/32591094/133867085-ff5dd487-33bd-4229-9bf5-42e84c7c39e5.png)
+* Initialise git for the project moving in to it `cd test_project` and then `git init`
+* In terminal pull the git in to your working directory `git pull https://github.com/DuncanMcRae/test_project`. Note: you may have to provide a username and password/token.
+* Use pyenv to assign a local version of python to the folder `pyenv local 3.9.7`. This creates a hidden `.python-version` file.
+* Add python modules `poetry add numpy`. This will generate a virtual environment.
 * Use `poetry env info` to grab the path for the virtual environment.
 * Open vscode and `ctrl+shift+P` or `View>Command Palette`. Type `Python Select Interpreter` then `+ Enter interpreter path` and paste the path from `poetry env info`. You should be able to see the python version and virtual environment in the lower left corner of the status bar inside vscode.
 * You can either work with git inside vscode or continue to use the shell. The below workflow will use the shell.
