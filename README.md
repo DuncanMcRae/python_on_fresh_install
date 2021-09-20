@@ -50,6 +50,7 @@ How to use it:
 What is it: Awesome. Git is a tool for tracking changes in files (software). You can fork software, merge forks back to the main branch and push and pull files from are remote repository (github) to your local system.
 * setup a two-factor authorisation or create a 'token' in github to give you the ability to push/pull between remote<>local through the github API: _Settings>Developer Settings>Personal Access Tokens_. I just save this token down in my LastPass password manager browser extension as a note and add it to my favourites so I can get at it quickly.
 * There is truck loads you can do with git/github, but what I do typically is outlined in the WORKFLOW section below.
+* Terminal git and github have different default branches with github being main and git (terminal) master. We change git terminal to change this with `git config --global init.defaultbranch main`.
 
 # VSCODE
 What is it: VisualStudio Code is a software IDE that enables users to install bolt-on languages and extensions and themes as needed.  
@@ -65,10 +66,11 @@ How to configure it:
 # WORKFLOW
 * Create a new project in GitHub.com and select to add: _README.md_, _LICENCE_ (TheUnlicence) and the _.gitignore_ (Python).
 * Use poetry to create a new project `poetry new test_project`. Image shows the default new project along with the git files. ![image](https://user-images.githubusercontent.com/32591094/133867085-ff5dd487-33bd-4229-9bf5-42e84c7c39e5.png)
-* Initialise git for the project moving in to it `cd test_project` and then `git init`
-* In terminal pull the git in to your working directory `git pull https://github.com/DuncanMcRae/test_project`. Note: you may have to provide a username and password/token.
+* Initialise git for the project moving in to it `cd test_project` and then `git init`. This will create a _main_ git branch locally.
+* Remove the `README.rst` file as github has no use for it. `rm README.rst`
+* In terminal pull the git in to your working directory `git pull https://github.com/DuncanMcRae/test_project`. Note: you may have to provide a username and password/token if it is a private repository.
 * Use pyenv to assign a local version of python to the folder `pyenv local 3.9.7`. This creates a hidden `.python-version` file.
-* Add python modules `poetry add numpy`. This will generate a virtual environment.
+* Add python modules `poetry add numpy`. This will error and you need to modify the python requirements in the \*.toml file. This will also, even if it fails, generate a virtual environment.
 * Use `poetry env info` to grab the path for the virtual environment.
 * Open vscode and `ctrl+shift+P` or `View>Command Palette`. Type `Python Select Interpreter` then `+ Enter interpreter path` and paste the path from `poetry env info`. You should be able to see the python version and virtual environment in the lower left corner of the status bar inside vscode.
 * You can either work with git inside vscode or continue to use the shell. The below workflow will use the shell.
