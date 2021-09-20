@@ -65,17 +65,17 @@ How to configure it:
 
 # WORKFLOW
 * Create a new project in GitHub.com and select to add: _README.md_, _LICENCE_ (TheUnlicence) and the _.gitignore_ (Python).
-* Use poetry to create a new project `poetry new test_project`. Image shows the default new project along with the git files. ![image](https://user-images.githubusercontent.com/32591094/133867085-ff5dd487-33bd-4229-9bf5-42e84c7c39e5.png)
-* Initialise git for the project moving in to it `cd test_project` and then `git init`. This will create a _main_ git branch locally.
+* Use poetry to create a new project `poetry new test_project`.
+* Initialise git for the project by moving in to it `cd test_project` and then `git init`. This will create a _main_ git branch on your local system.
 * Remove the `README.rst` file as github has no use for it. `rm README.rst`
 * In terminal pull the git in to your working directory `git pull https://github.com/DuncanMcRae/test_project`. Note: you may have to provide a username and password/token if it is a private repository.
 * Use pyenv to assign a local version of python to the folder `pyenv local 3.9.7`. This creates a hidden `.python-version` file.
-* Add python modules `poetry add numpy`. This will error and you need to modify the python requirements in the \*.toml file. This will also, even if it fails, generate a virtual environment.
+* Add python modules `poetry add numpy`. This will error and you need to modify the python requirements in the \*.toml file. This will also, even if it fails, generate a virtual environment. Add all the libraries you need.
 * Use `poetry env info` to grab the path for the virtual environment.
 * Open vscode and `ctrl+shift+P` or `View>Command Palette`. Type `Python Select Interpreter` then `+ Enter interpreter path` and paste the path from `poetry env info`. You should be able to see the python version and virtual environment in the lower left corner of the status bar inside vscode.
 * You can either work with git inside vscode or continue to use the shell. The below workflow will use the shell.
 * You can see which files have changed on the local system `git status`, you can add them to the _staging area_ `git add <filename>`. Git takes glob like commands so `git add *` will add all changes. You then `git commit -m "description of commit"` to lock those changes in to your local git database.
-* Send the changes to the remote repository `git push`. This should ask you for your username and password. My password is the token I created for remote access to the github API.
+* Send the changes to the remote repository `git push <url>`. This should ask you for your username and password. My password is the token I created for remote access to the github API. As we have configured the local system to have main as our init git, this push doesn't create a new pull-request at the remote repository.
 * You can then `git pull` and `git push` all day long.
 
 # ADDITIONAL WORKFLOW ROUTINES
