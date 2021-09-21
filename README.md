@@ -77,6 +77,7 @@ How to configure it:
 * You can see which files have changed on the local system `git status`, you can add them to the _staging area_ `git add <filename>`. Git takes glob like commands so `git add *` will add all changes. You then `git commit -m "description of commit"` to lock those changes in to your local git database.
 * Send the changes to the remote repository `git push <url>`. This should ask you for your username and password. My password is the token I created for remote access to the github API. As we have configured the local system to have main as our init git, this push doesn't create a new pull-request at the remote repository.
 * You can then `git pull` and `git push` all day long.
+* Run your code from vscode or from the terminal with `poetry run python test_project/main.py`
 
 # ADDITIONAL WORKFLOW ROUTINES
 * Branching
